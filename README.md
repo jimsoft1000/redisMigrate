@@ -17,6 +17,13 @@ Redis数据库迁移工具，主要有以下特性
 ./redisMigrate -SourcePrefix "spring*" -SourceIP "....rds.aliyuncs.com" -SourcePort 6379 -SourceDB 1 -SourcePasswd "xxxx" -TargetIP "......rds.aliyuncs.com" -TargetPort 6379 -TargetDB 1 -TargetPasswd "....."
 `
 
+#### 迁移整库所有的key
+指定*
+
+`
+./redisMigrate -SourcePrefix "*" -SourceIP "....rds.aliyuncs.com" -SourcePort 6379 -SourceDB 1 -SourcePasswd "xxxx" -TargetIP "......rds.aliyuncs.com" -TargetPort 6379 -TargetDB 1 -TargetPasswd "....."
+`
+
 #### 不同库迁移
 
 `./redisMigrate -SourcePrefix "spring*" -SourceIP "....rds.aliyuncs.com" -SourcePort 6379 -SourceDB 1 -SourcePasswd "xxxx" -TargetIP "......rds.aliyuncs.com" -TargetPort 6379 -TargetDB 2 -TargetPasswd "....."`
